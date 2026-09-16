@@ -1,0 +1,61 @@
+GET http://localhost:3000
+
+### Register
+POST http://localhost:3000/api/register
+Content-Type: application/json
+
+{
+  "name": "User1",
+  "email": "user1@test.com",
+  "password": "Password@123"
+}
+
+### Login
+POST http://localhost:3000/api/login
+Content-Type: application/json
+
+{
+  "email": "user1@test.com",
+  "password": "Password@123"
+}
+
+### Create a note
+POST http://localhost:3000/api/notes
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJlbWFpbCI6InVzZXJAdGVzdC5jb20iLCJpYXQiOjE3ODk1NTc5NzEsImV4cCI6MTc4OTU4Njc3MX0.0l2ruu7SZhAADgTEgx2Dbs5ZNS-hKA4FEXUBH22Rg3s
+
+{
+  "title": "Note 3",
+  "body": "Body of note3"
+}
+
+### Get all notes for a user w/o pagination
+GET http://localhost:3000/api/notes
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJlbWFpbCI6InVzZXJAdGVzdC5jb20iLCJpYXQiOjE3ODk1NTc5NzEsImV4cCI6MTc4OTU4Njc3MX0.0l2ruu7SZhAADgTEgx2Dbs5ZNS-hKA4FEXUBH22Rg3s
+
+### Get all notes for a user with pagination
+ GET http://localhost:3000/api/notes?skip=0&take=10
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJlbWFpbCI6InVzZXJAdGVzdC5jb20iLCJpYXQiOjE3ODk1NTc5NzEsImV4cCI6MTc4OTU4Njc3MX0.0l2ruu7SZhAADgTEgx2Dbs5ZNS-hKA4FEXUBH22Rg3s
+
+
+### Get single note with its id
+ GET http://localhost:3000/api/notes/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJlbWFpbCI6InVzZXJAdGVzdC5jb20iLCJpYXQiOjE3ODk1NTc5NzEsImV4cCI6MTc4OTU4Njc3MX0.0l2ruu7SZhAADgTEgx2Dbs5ZNS-hKA4FEXUBH22Rg3s
+
+### Update a note with its id
+PATCH http://localhost:3000/api/notes/3
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJlbWFpbCI6InVzZXJAdGVzdC5jb20iLCJpYXQiOjE3ODk1NTc5NzEsImV4cCI6MTc4OTU4Njc3MX0.0l2ruu7SZhAADgTEgx2Dbs5ZNS-hKA4FEXUBH22Rg3s
+
+{
+  "title": "Note 3",
+  "body": "Body of note3"
+}
+
+### Delete a note with its id
+DELETE http://localhost:3000/api/notes/4
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJlbWFpbCI6InVzZXJAdGVzdC5jb20iLCJpYXQiOjE3ODk1NTc5NzEsImV4cCI6MTc4OTU4Njc3MX0.0l2ruu7SZhAADgTEgx2Dbs5ZNS-hKA4FEXUBH22Rg3s
