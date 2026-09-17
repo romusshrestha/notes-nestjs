@@ -15,14 +15,14 @@ POST http://localhost:3000/api/login
 Content-Type: application/json
 
 {
-  "email": "user1@test.com",
+  "email": "user@test.com",
   "password": "Password@123"
 }
 
 ### Create a note
 POST http://localhost:3000/api/notes
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJlbWFpbCI6InVzZXJAdGVzdC5jb20iLCJpYXQiOjE3ODk1NTc5NzEsImV4cCI6MTc4OTU4Njc3MX0.0l2ruu7SZhAADgTEgx2Dbs5ZNS-hKA4FEXUBH22Rg3s
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJlbWFpbCI6InVzZXJAdGVzdC5jb20iLCJpYXQiOjE3ODk2MTc5MjIsImV4cCI6MTc4OTY0NjcyMn0.KZmbvZs2Cfk5pyY_OI5_zhD3hbM_dy2IIxEUjVUz07I
 
 {
   "title": "Note 3",
@@ -32,23 +32,23 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJlbWFpb
 ### Get all notes for a user w/o pagination
 GET http://localhost:3000/api/notes
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJlbWFpbCI6InVzZXJAdGVzdC5jb20iLCJpYXQiOjE3ODk1NTc5NzEsImV4cCI6MTc4OTU4Njc3MX0.0l2ruu7SZhAADgTEgx2Dbs5ZNS-hKA4FEXUBH22Rg3s
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJlbWFpbCI6InVzZXJAdGVzdC5jb20iLCJpYXQiOjE3ODk2MTc5MjIsImV4cCI6MTc4OTY0NjcyMn0.KZmbvZs2Cfk5pyY_OI5_zhD3hbM_dy2IIxEUjVUz07I
 
 ### Get all notes for a user with pagination
  GET http://localhost:3000/api/notes?skip=0&take=10
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJlbWFpbCI6InVzZXJAdGVzdC5jb20iLCJpYXQiOjE3ODk1NTc5NzEsImV4cCI6MTc4OTU4Njc3MX0.0l2ruu7SZhAADgTEgx2Dbs5ZNS-hKA4FEXUBH22Rg3s
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJlbWFpbCI6InVzZXJAdGVzdC5jb20iLCJpYXQiOjE3ODk2MTc5MjIsImV4cCI6MTc4OTY0NjcyMn0.KZmbvZs2Cfk5pyY_OI5_zhD3hbM_dy2IIxEUjVUz07I
 
 
 ### Get single note with its id
  GET http://localhost:3000/api/notes/1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJlbWFpbCI6InVzZXJAdGVzdC5jb20iLCJpYXQiOjE3ODk1NTc5NzEsImV4cCI6MTc4OTU4Njc3MX0.0l2ruu7SZhAADgTEgx2Dbs5ZNS-hKA4FEXUBH22Rg3s
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJlbWFpbCI6InVzZXJAdGVzdC5jb20iLCJpYXQiOjE3ODk2MTc5MjIsImV4cCI6MTc4OTY0NjcyMn0.KZmbvZs2Cfk5pyY_OI5_zhD3hbM_dy2IIxEUjVUz07I
 
 ### Update a note with its id
 PATCH http://localhost:3000/api/notes/3
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJlbWFpbCI6InVzZXJAdGVzdC5jb20iLCJpYXQiOjE3ODk1NTc5NzEsImV4cCI6MTc4OTU4Njc3MX0.0l2ruu7SZhAADgTEgx2Dbs5ZNS-hKA4FEXUBH22Rg3s
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJlbWFpbCI6InVzZXJAdGVzdC5jb20iLCJpYXQiOjE3ODk2MTc5MjIsImV4cCI6MTc4OTY0NjcyMn0.KZmbvZs2Cfk5pyY_OI5_zhD3hbM_dy2IIxEUjVUz07I
 
 {
   "title": "Note 3",
@@ -58,4 +58,4 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJlbWFpb
 ### Delete a note with its id
 DELETE http://localhost:3000/api/notes/4
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJlbWFpbCI6InVzZXJAdGVzdC5jb20iLCJpYXQiOjE3ODk1NTc5NzEsImV4cCI6MTc4OTU4Njc3MX0.0l2ruu7SZhAADgTEgx2Dbs5ZNS-hKA4FEXUBH22Rg3s
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJlbWFpbCI6InVzZXJAdGVzdC5jb20iLCJpYXQiOjE3ODk2MTc5MjIsImV4cCI6MTc4OTY0NjcyMn0.KZmbvZs2Cfk5pyY_OI5_zhD3hbM_dy2IIxEUjVUz07I
